@@ -1,0 +1,15 @@
+/*---------------------------------------------------------------------------------------------
+
+Achivo principal tipo Manifest de Android Studio en el que importaremos todos los estilos 
+que va a tener el proyecto, pudiendo asi separarlos segun su funcionalidad y hacer más fácil 
+su mantenimiento. 
+
+---------------------------------------------------------------------------------------------
+
+El selector ROOT: está definido en fonts.css y contiene las variables globales del proyecto
+como los colores y las fuentes que se van a usar en todo el proyecto.
+
+*/
+
+@import url("fonts.css");
+@import url("containers.css");
