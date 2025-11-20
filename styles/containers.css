@@ -10,11 +10,10 @@ negro y cambiamos el color de la fuente a blanco*/
 
 body{
     margin: 0;
-    padding: 0;
+    padding: 20px;
 
-
-    background-color: rgb(27, 26, 26);
-    color: white;
+    background-image: radial-gradient(125% 125% at 50% 10%, #fff 40%, #475569 100%);
+    background-attachment: fixed;
 }
 
 .index{ 
@@ -26,10 +25,14 @@ body{
 
 .cabecera{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-family: var(--protest-revolution-regular);
 
     width: 100%;
-    height: 120px;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 50px;
 }
 
 .item{
@@ -40,48 +43,47 @@ body{
 
     width: 100%;
     height: 100%;
-    background-color: rgb(109, 196, 223);
 }
 
 .content{
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    padding: 20px;
+
+    font-family: var(--alegreya);
+
+    flex-direction: column;
+
+    height:80vh;
+}
+
+/*Para ahorrarnos el padding declaramos un 80% del contenedor padre*/
+
+.aside{
+
+    display: block;
+    font-family: var(--bricolage);
+
+    width: 80%;
+
+}
+
+.foot{
     display: flex;
     justify-content: center;
     align-items: center;
 
-    flex-direction: column;
-
-    height: 50vh;
-
-    background-color: rgb(119, 186, 186);
-}
-
-.part-1{
-    width: 100%;
-    height: 50%;
-}
-
-.part-2{
-    width: 100%;
-    height: 50%;
-    background-color: rgb(80, 157, 223);
-}
-
-.aside{
-    background-color: rgb(49, 147, 186);
-}
-
-.foot{
-    display: block;
     font-family: var(--protest-revolution-regular);
 
-    height: 150px;
-    
-    background-color: rgb(97, 117, 146);
+    height: 100px;
+
 }
 
 /*Centrado de todo el contenido*/
 
-.item, .part-1, .part-2, .aside, .foot {
+.item, .part-1, .part-2, .aside, .foot, .left {
     display: flex;
     justify-content: center;
     align-items: center;

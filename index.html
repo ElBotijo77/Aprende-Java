@@ -21,27 +21,47 @@ implementaran algunos archivos de PHP y Javascript.
     <!--Importamos los 4 archivos CSS del proyecto-->
 
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/fonts.css">
 
     <title>Pagina principal</title>
 
 </head>
-<body >
+<body>
 
     <!--Cabecera de la pagina-->
     <header class="cabecera">
-        <h1>Proyecto 1º Trimestre</h1>
+        <h1 class="left">
+            <img class="icon" src="assets/java-icon.png" alt="Icono de Java">
+            <span class="aprende-java" style="padding-left: 29px;">Aprende Java <br> con ejemplos</span>
+        </h1>
+
+        <button class="right button">
+            Aqui ira la barra de busqueda
+        </button>
+
+        <div>
+            <button class="right button">
+                Iniciar sesion
+            </button>
+            <button class="right button">
+                Registrarse
+            </button>
+        </div>
     </header>
 
     <!--Contenido principal de la pagina-->
     <main class="content">
-        <h2>Bienvenido a la pagina principal</h2>
-        <p>En esta pagina web aprenderas las estructuras basicas de Java a traves de ejercicios resueltos.</p>
-        <p>Utiliza el menu de navegacion para explorar los diferentes temas y ejercicios disponibles.</p>
+        <div class="article">
+            <h2>Bienvenido a la pagina principal</h2>
+            <p>En esta pagina web aprenderas las estructuras basicas de Java a traves de ejercicios resueltos.</p>
+            <p>Utiliza el menu de navegacion para explorar los diferentes temas y ejercicios disponibles.</p>
+        </div>
+
+        <aside class="aside">Aqui mostraremos una lista desplegable</aside>
+
     </main>
 
     <!--Pie de pagina-->
-    <footer class="footer">
+    <footer class="foot">
         <p>&copy; 2024 Proyecto 1º Trimestre. Todos los derechos reservados.</p>
     </footer>   
 

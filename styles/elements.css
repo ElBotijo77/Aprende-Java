@@ -1,0 +1,26 @@
+.button {
+    padding: 5px 10px;
+    width: auto;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #151515;
+    color: #eee;
+    border-radius: 7px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease-out;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-span {
+  color: #aaa;
+}
+
+.icon {
+    width: 87px;
+    height: 100px;
+}
