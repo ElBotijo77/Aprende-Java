@@ -93,6 +93,7 @@ y aside los hijos*/
 }
 
 .article{
+    padding-top: 10vh;
     font-family: var(--bricolage);
 
     width: 100%;

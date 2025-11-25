@@ -1,0 +1,10 @@
+/*Archivo dedicado a la sobreescritura de propiedades de los elementos
+cargados de Boostrap*/
+
+button.btn.btn-primary{
+    background-color: black;
+}
+
+footer.py-5{
+    height: 120px;
+}

@@ -8,16 +8,42 @@
 El tema de esta pagina web será la de enseñar las estructuras basicas de Java con
 pequeños ejercicios resueltos cogidos de la pagina LeetCode. Si da tiempo se 
 implementaran algunos archivos de PHP y Javascript.
+Importamos varios elementos de Boostrap
 
 ---------------------------------------------------------------------------------
 --------------------------------------------------------------------------------->
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head style="margin: 0;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
+    <!--Enlace CDN que apunta al archivo principal CSS de Boostrap. Para modificar 
+    un elemento debemos crear un nuevo archivo importando otro link para poder sobreescribir-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="..." crossorigin="anonymous">
+
+    <!--Recogemos los recursos de Highlight.js para mostrar como si fuera codigo para 
+    evitar hacer capturas a los ejemplos desde un IDE. Su funcionalidad es muy parecida a
+    CodeMirror pero en este no puede modificar el usuario
+    Nota: Siempre escribir el codigo entre <pre><code class="languaje-java"> indicando
+    siempre que lenguaje usaremos-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+
+    <!--Importamos los recursos necesarios de CodeMirror para resaltar los datos como
+    si fuera un codigo escrito en un IDE. Para personalizarlo descargamos un tema oscuro 
+    (solarized.min) y cargamos el script clike.min para que sepa que es un lenguaje similar
+    a C-->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material.min.css">
+
     <!--Importamos los 4 archivos CSS del proyecto-->
 
     <link rel="stylesheet" href="styles/main.css">
@@ -25,19 +51,22 @@ implementaran algunos archivos de PHP y Javascript.
     <title>Pagina principal</title>
 
 </head>
+
 <body>
 
     <!--Cabecera de la pagina-->
     <header class="cabecera">
         <div class="left">
             <img class="icon" src="assets/java-icon.png" alt="Icono de Java">
-            <div class="aprende-java">Aprende Java con ejemplos</div>
+            <div class="aprende-java">Aprende Java con ejercicios</div>
         </div>
 
         <div class="cabecera center">
-            <button class="button">
-                Ir a GitHub
-            </button>
+            <a href="https://github.com/ElBotijo77/portafolio.git">
+                <button class="button">
+                    Ir a GitHub
+                </button>
+            </a>
             <img class="icon-small-header" src="assets/icon-github.png" alt="Icono de GitHub">
         </div>
 
@@ -57,6 +86,18 @@ implementaran algunos archivos de PHP y Javascript.
             <h2>Bienvenido a la pagina principal</h2>
             <p>En esta pagina web aprenderas las estructuras basicas de Java a traves de ejercicios resueltos.</p>
             <p>Utiliza el menu de navegacion para explorar los diferentes temas y ejercicios disponibles.</p>
+
+            <div class="code-mirror">
+                <textarea name="codigo" id="java-editor"></textarea>
+            </div>
+
+            <div style="padding-top: 60px;">
+                <pre><code class="languaje-java">
+                    int i=0;
+                    String z = "Hola illo";
+                </code></pre>
+            </div>
+
         </div>
 
         <aside class="aside">
@@ -89,15 +130,74 @@ implementaran algunos archivos de PHP y Javascript.
                     <li>Proyectos practicos</li>
                 </ul>
             </div>
-   
+
         </aside>
 
     </main>
 
     <!--Pie de pagina-->
-    <footer class="foot">
-        <p>&copy; 2024 Proyecto 1º Trimestre. Todos los derechos reservados.</p>
-    </footer>   
+    <div class="container">
+        <footer class="py-5">
+            <div class="row">
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Inicio</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="index.html" class="nav-link p-0 text-body-secondary">Home</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Primera leccion</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Perfil</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Ejercicios</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Recursos</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="https://stackoverflow.com/questions" class="nav-link p-0 text-body-secondary">Stack Overflow</a></li>
+                        <li class="nav-item mb-2"><a href="https://www.codewars.com/" class="nav-link p-0 text-body-secondary">Codewars</a></li>
+                        <li class="nav-item mb-2"><a href="https://leetcode.com/" class="nav-link p-0 text-body-secondary">LeetCode</a></li>
+                        <li class="nav-item mb-2"><a href="https://gemini.google.com/" class="nav-link p-0 text-body-secondary">Gemini</a></li>
+                        <li class="nav-item mb-2"><a href="https://roadmap.sh/java" class="nav-link p-0 text-body-secondary">RoadMap</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-md-2 mb-3">
+                    <h5>Contacto</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Sobre nosotros</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQS</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Historia</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 offset-md-1 mb-3">
+                    <form method="post">
+                        <h5>Suscribete a nuestro Newsletter</h5><br>
+                        <div class="d-flex flex-column flex-sm-row w-100 gap-2"> <label for="newsletter1"
+                                class="visually-hidden">Email address</label> <input id="newsletter1" type="email"
+                                class="form-control" placeholder="Email"> <button class="btn btn-primary"
+                                type="button">Suscribete</button> </div>
+                    </form>
+                </div>
+            </div>
+            <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+                <p class="item" style="font-style: italic">© 2025 Aprende Java, todos los derechos reservados</p>
+                <ul class="list-unstyled d-flex">
+                    <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Instagram"><svg class="bi"
+                                width="24" height="24">
+                                <use xlink:href="#instagram"></use>
+                            </svg></a></li>
+                    <li class="ms-3"><a class="link-body-emphasis" href="#" aria-label="Facebook"><svg class="bi"
+                                width="24" height="24" aria-hidden="true">
+                                <use xlink:href="#facebook"></use>
+                            </svg></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+<!--Colocamos los scripts al final porque cuando el navegador llega a ellos, para las tareas
+para renderizar los programas-->
+
+<script src="scripts/CodeMirror.js"></script>
+<script>hljs.highlightAll();</script>
 
 </body>
+
 </html>

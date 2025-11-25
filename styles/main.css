@@ -14,3 +14,4 @@ como los colores y las fuentes que se van a usar en todo el proyecto.
 @import url("fonts.css");
 @import url("containers.css");
 @import url("elements.css");
+@import url("boostrap-override.css");
