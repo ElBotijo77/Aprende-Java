@@ -29,20 +29,23 @@ implementaran algunos archivos de PHP y Javascript.
 
     <!--Cabecera de la pagina-->
     <header class="cabecera">
-        <h1 class="left">
+        <div class="left">
             <img class="icon" src="assets/java-icon.png" alt="Icono de Java">
-            <span class="aprende-java" style="padding-left: 29px;">Aprende Java <br> con ejemplos</span>
-        </h1>
+            <div class="aprende-java">Aprende Java con ejemplos</div>
+        </div>
 
-        <button class="right button">
-            Aqui ira la barra de busqueda
-        </button>
+        <div class="cabecera center">
+            <button class="button">
+                Ir a GitHub
+            </button>
+            <img class="icon-small-header" src="assets/icon-github.png" alt="Icono de GitHub">
+        </div>
 
-        <div>
-            <button class="right button">
+        <div class="cabecera right">
+            <button class="button">
                 Iniciar sesion
             </button>
-            <button class="right button">
+            <button class="button">
                 Registrarse
             </button>
         </div>
@@ -56,7 +59,38 @@ implementaran algunos archivos de PHP y Javascript.
             <p>Utiliza el menu de navegacion para explorar los diferentes temas y ejercicios disponibles.</p>
         </div>
 
-        <aside class="aside">Aqui mostraremos una lista desplegable</aside>
+        <aside class="aside">
+            <div class="search-bar">
+                <form class="search-form" method="post">
+                    <input type="text" placeholder="Que buscas?...">
+                    <button class="button especial">
+                        <img class="icon-small-aside" src="assets/icon-lupa.png" alt="Buscar">
+                    </button>
+                </form>
+            </div>
+
+            <div>
+                <img class="example-code-java" src="assets/example-code-java.jpg" alt="java-example">
+            </div>
+
+            <div class="table-articles">
+                <ul class="list-articles">
+                    <li style="font-family: var(--alegreya);">Articulos</li>
+                    <li>Tipos de datos</li>
+                    <li>Entrada de datos</li>
+                    <li>Estructuras de control</li>
+                    <li>Funciones y metodos</li>
+                    <li>Arrays y colecciones</li>
+                    <li>Programacion orientada a objetos (POO)</li>
+                    <li>Manejo de excepciones</li>
+                    <li>Archivos y streams</li>
+                    <li>Hilos y concurrencia</li>
+                    <li>Bibliotecas y frameworks</li>
+                    <li>Proyectos practicos</li>
+                </ul>
+            </div>
+   
+        </aside>
 
     </main>
 
