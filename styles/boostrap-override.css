@@ -5,6 +5,8 @@ button.btn.btn-primary{
     background-color: black;
 }
 
+flex-shrink-0 p-3 bg-white
+
 footer.py-5{
     height: 120px;
 }

@@ -1,0 +1,29 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "Primera prueba",
+  "keywords": [
+    "react",
+    "frontend",
+    "webapp",
+    "javascript"
+  ],
+  "homepage": "https://github.com/ElBotijo77/Aprende-Java#readme",
+  "bugs": {
+    "url": "https://github.com/ElBotijo77/Aprende-Java/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElBotijo77/Aprende-Java.git"
+  },
+  "license": "ISC",
+  "author": "Eric",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \\\"Error: no test specified\\\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
