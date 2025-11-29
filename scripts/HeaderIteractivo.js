@@ -1,14 +1,22 @@
 // scripts/HeaderIteractivo.js
 
-// 1. **VERIFICAR:** ¿Es 'cabecera' la clase correcta? (Sí, según tu HTML)
 const header = document.querySelector('.cabecera'); 
 
-// Si no encuentra el elemento, 'header' será null. 
-// Para verificar, añade: console.log(header);
+//Si header toma un valor null, lo mostrara por pantalla
+
+if(header == null) console.log("Error en la seleccion");
+
 
 let lastScrollTop = 0;
-// 2. **VERIFICAR:** Si tu header es muy bajo, usa un valor fijo más alto, ej: 100
+// Mediante un operador ternario (if-else simplificado) determina el limite de desplazamient
+//inicial medida en pixeles
 const offsetLimit = header ? header.offsetHeight : 60; 
+
+//Añadimos un evento a la escucha de cuando se haga scroll. Se usara una clase anonima al 
+//igual que se hace con los eventos en Java. Para ello usaremos =>
+//El metodo pageYOffset() determina el numero de pixeles que se ha desplazado el usuario 
+//desde la parte de arriba
+//document.documentElement.scrollTop hace lo mismo asegurando el script en navegadpres mas antiguos
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
