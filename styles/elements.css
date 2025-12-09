@@ -10,6 +10,7 @@
     font-weight: 600;
     cursor: pointer;
     transition: all 0.25s ease-out;
+    
 }
 
 .button:hover {
@@ -25,6 +26,20 @@
     background-color: #bdbbbb;
     width: auto;
     height: auto;
+}
+
+.button.login{
+    width: 80%;
+    background-color: hsl(0, 3%, 71%); 
+    margin-top: 10px;
+}
+
+#login{
+    background-color: #0b3460;
+}
+
+#facebook{
+    background-color: #1868a4;
 }
 
 /*Modificacion de iconos*/
