@@ -6,9 +6,20 @@
 -----------------------------------------------------------------------------------
 
 El tema de esta pagina web será la de enseñar las estructuras basicas de Java con
-pequeños ejercicios resueltos cogidos de la pagina LeetCode. Si da tiempo se 
-implementaran algunos archivos de PHP y Javascript.
-Importamos varios elementos de Boostrap
+pequeños ejercicios resueltos cogidos de la pagina CodeWars/LeetCode.
+Se ha implementado un pequeño porgrama en JavaScript en el que maneja un header 
+interactivo, además de haber importando el footer completo de Boostrap
+
+Funcionalidades que no ha dado tiempo a implementar:
+-Clases de Tailwind de manera optima con nodejs, pero por haber estado malo mas de 
+una semana no se ha podido completar el proceso de comprension
+-Añadir back-end para que CodeMirror pueda compilar y ejecutar el código escrito
+-Programa PHP que recolecte unas Coockies básicas con $GET
+-Aside más vistoso, con la posibilidad de hacerla lista desplegable con js y que
+cuando aparezca por completo te persiga haciendo scroll hasta que se tope con otro
+elemento
+-Un formulario de inicio de sesion menos cutre
+
 
 ---------------------------------------------------------------------------------
 --------------------------------------------------------------------------------->
@@ -87,20 +98,80 @@ Importamos varios elementos de Boostrap
     <!--Contenido principal de la pagina-->
     <main class="content">
         <div class="article">
-            <h2>Bienvenido a la pagina principal</h2>
-            <p>En esta pagina web aprenderas las estructuras basicas de Java a traves de ejercicios resueltos.</p>
-            <p>Utiliza el menu de navegacion para explorar los diferentes temas y ejercicios disponibles.</p>
+            <h1>Bienvenido a la pagina principal</h1>
+            <p>En esta pagina web aprenderás las estructuras básicas de Java a través de ejercicios resueltos.</p>
+            <p>Los temas están catalogados en el aside derecho siguiendo un <b>orden ascendente en cuanto a dificultad</b> 
+                de comprensión, siendo <i>Tipo de datos</i> el más sencillo y <i>Concurrencias</i> como uno de los más complejos
+            </p>
+            <p>El formato de las lecciones se harán de la siguiente manera</p>
 
-            <div class="code-mirror" style="width: auto;">
-                <textarea name="codigo" id="java-editor"></textarea>
-            </div>
+            <ol>
+                <li><a href="#1">Breve introduccion</a></li>
+                <li><a href="#2">Explicación teorica</a></li>
+                <li><a href="#3">Ejemplos de usos</a></li>
+                <li><a href="#4">Problema resuelto</a></li>
+                <li><a href="#5">Práctica del usuario, con ejercicios propuestos</a></li>
+            </ol><br>
 
-            <div style="padding-top: 60px;">
-                <pre><code class="languaje-java">
-                    int i=0;
-                    String z = "Hola illo";
-                </code></pre>
-            </div>
+            <section id="1">
+                <h3>Breve Introducción</h3>
+                <p>Aqui trataremos sobre qué irá la próxima lección, un poco de hisotoria y si la tuviese alguna curiosidad, todo
+                    a modo de pequeña introducción
+                </p>
+            </section>
+
+            <section id="2">
+                <h3>Explicación teorica</h3>
+                <p>Esta es una de las partes más importantes, en la cual se deberá mostrar con la suficiente claridad y destreza
+                    la parte teórica del tema a tratar. Todo ello va dirigido a personas que no sabe programar y por tanto les 
+                    costará más entender todo lo relacionado con la lógica abstracta que supone el aprendizaje de un lenguaje de 
+                    programación. La dificultad aumenta al ser Java por tener las características de un tipado fuerte y ser
+                    muy estricto. Por ello para ofrecer información veraz se constrastará con diversas fuentes, siempre que sean
+                    confiables 
+                </p>
+            </section>
+
+            <section id="#3">
+                <h3>Ejemplos de usos</h3>
+                <p>Para facilitar la comprensión o resolver la clásica duda de <i>para que usarlo</i>, se mostrarán una serie de
+                    situaciónes en las que requieran usar las técnicas aprendidas durante la lección actual. Se mostrarán casos
+                    reales para que el alumno enlace la información con la tarea para la que está especificamente diseñada</p>
+            </section>
+
+            <section id="4">
+                <h3>Problema resuelto</h3>
+                <p>Junto con la teoría, esta parte es de las más criticas del articulo. Con la ayuda del scipt <b>Highlight.js</b>
+                    mostraremos al usuario ejemplos de código, todos ellos detallados en cuanto a comentarios incluyendo información
+                    de que hace cada parte del programa. La ventaja de este script es que nos evitará hacer capturas y subirlas, con
+                    el consecuente peso innecesario para el servidor. Otra de las ventajas es que es muy llamativo en cuando a colores,
+                    como si fuera un IDE. Una prueba de este script: </p>
+
+                <div style="padding-top: 60px;">
+                    <pre><code class="languaje-java">
+                        String z = "Hola illo, esto es una prueba de Highlight.js";
+                        int a = 12 + 12 * 21;
+                        System.out.print("Valor del numero a: " + a);
+                    </code></pre>
+                </div>
+            </section>
+
+            <section id="5">
+                <h3>Práctica del usuario con ejercicios</h3>
+                <p>Aquí dejaremos que el usuario ponga en práctica lo aprendido durante la lección con una serie de ejercicios 
+                    propuestos en los que se agruparan en distintas dificultades, siempre poniendo uno sencillo y uno para avanzados
+                    Las soluciones se podrán observar en una pagina aparte que se llamará <i>Soluciones</i> donde aparecerá solo 
+                    la solución en código y no explicada.
+                </p>
+                <p>La ventana de CodeMirror inicializa ahora mismo vacía, pero próximamente se configurará el método main por 
+                    defecto para que solo haya que poner las líneas de negocio y darle a ejecutar para que funcione. Un ejemplo de 
+                    dicha ventana aparece más abajo 
+                </p>
+
+                <div class="code-mirror" style="width: auto;">
+                    <textarea name="codigo" id="java-editor"></textarea>
+                </div>
+
+            </section>
 
         </div>
 

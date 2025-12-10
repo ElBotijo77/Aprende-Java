@@ -59,6 +59,10 @@
     height: 100px;
 }
 
+h3{
+    padding-top: 5vh;
+}
+
 /*Modificamos el textArea que se encargará de analizar y ejemplificar codigo como si
 disponieramos de un ide*/
 

@@ -88,10 +88,10 @@ y aside los hijos*/
 
 .content{
     display: grid;
-    grid-template-columns: 3fr 1.3fr;
+    grid-template-columns: 4fr 1fr;
     justify-items: center;
 
-    padding: 20px;
+    padding: 28px;
     gap: 10%;
 
     font-family: var(--alegreya);
@@ -112,8 +112,8 @@ y aside los hijos*/
 /*Para ahorrarnos el padding declaramos un 80% del contenedor padre*/
 
 .aside{
-    display: grid;
-    grid-template-rows: 0.2fr 0.2fr 1fr;
+    display: flex;
+    flex-direction: column;
 
     justify-items: center;
     align-items: center;
@@ -121,7 +121,6 @@ y aside los hijos*/
 
     font-family: var(--bricolage);
 
-    width: 80%;
 
 }
 
