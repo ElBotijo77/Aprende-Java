@@ -3,6 +3,7 @@ dandoles como valor a variables para poder usarlas más facilmente*/
 
 @import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cause:wght@100..900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap');
@@ -12,11 +13,19 @@ dandoles como valor a variables para poder usarlas más facilmente*/
 
     --titillium-web-regular: 'Titillium Web', sans-serif;
     --protest-revolution-regular: 'Protest Revolution', sans-serif;
+    --cause-uniquifier: "Cause", "sans-sefir";
     --fondo-pagina-gradiente: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
     --audiowide: "Audiowide", sans-serif;
     --alegreya: "Alegreya", sans-serif;
     --bricolage: "Bricolage Grotesque", sans-serif;
+}
+
+.cause-uniquifier {
+  font-family: "Cause", "cursive";
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
 }
 
 .protest-revolution-regular {

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/monokai.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/languages/java.min.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/theme/material.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/clike/clike.min.js"></script>
+
+
+    <title>Document</title>
+</head>
+<body>
+        <header class="cabecera">
+        <div class="left">
+            <img class="icon" src="../assets/java-icon.png" alt="Icono de Java">
+            <div class="aprende-java">Aprende Java con ejercicios</div>
+        </div>
+
+        <div class="center">
+            <a href="https://github.com/ElBotijo77/portafolio.git">
+                <button class="button">
+                    Ir a GitHub
+                </button>
+            </a>
+            <img class="icon-small-header" src="../assets/icon-github.png" alt="Icono de GitHub">
+        </div>
+
+        <div class="right">
+            <a href="pages/login.html">
+                <button class="button">
+                    Iniciar sesion
+                </button>
+            </a>
+            <a href="pages/login.html">
+                <button class="button">
+                    Registrarse
+                </button>
+            </a>
+            <a href="../index.html">
+                <img class="icon-small-header" src="../assets/home.png" alt="Home">
+            </a>
+        </div>
+    </header>
+
+    <main class="content">
+        <div class="article">
+            <h1>ArrayList</h1>
+            <p>En esta primera lección, abordaremos uno de los tipos de Colecciones más utilizados: el <b>ArrayList</b>. Dada su 
+                versatilidad y familiaridad, se considera el tipo de colección estándar o predeterminado al igual que se utiliza 
+                el tipo de dato primitivo <i>int</i> para declarar un número entero 
+            </p>
+
+            <h3>Características principales</h3>
+            <p>El ArrayList es un "tipo" de array mejorado en el que no es necesario definir un tamaño y puede variar de valor 
+                en tiempo de ejecución. Tiene una serie de métodos con los que acceder, modificar o borrar elementos de una manera
+                sencilla y dinámica. Al igual que en todo, Java lo considera como un objeto por lo que hay que tratarlo como tal. Esta
+                lista pertenece a un tipo de las muchas que hay en Java: Linkedlist, Set, Maps, Queues, etc.  
+            </p>
+            <p>La principal ventaja que pueda tener esta lista frente a otras es que podemos acceder a cualquier elemento mendiante
+                su indice de posicion, en los Sets por ejemplo no se puede ya que solo itera de inicio a fin o al revés. Además de 
+                garantizar el orden de inserción, podemos redimensionar mediante añadido o borrado de elementos de forma dinámica. Pero 
+                no todo es bueno, dependiendo de para que lo utilicemos podemos optar por otro tipo más eficiente.
+            </p>
+            <p>No añadiremos más teoria por el momento, aunque esta lección de para mucho más</p>
+
+            <h3>Ejemplos de uso</h3>
+            <p>Para poder ver un ejemplo más claro, podemos imaginar que queremos crear un registro de usuarios de forma dinámica
+                en la que no sabemos que tamaño exacto tendrá. Esto es un problema típico en las aplicaciones web, y para ello podemos
+                apoyarnos en los ArrayList. Otro ejemplo fácil de ver es para un carrito de la compra, al igual que en el ejemplo anterior
+                necesitamos un array que este sujeto a cambios en tiempo real
+            </p>
+
+            <h3>Porblema resuelto</h3>
+            <p>Ahora viene la parte más divertida: Crear la magia. En este ejemplo usamos una lista para que al sumar dos numeros
+                pertenecientes a un array, nos de el valor de un elemento <i>target</i>. Este es el primer problema que se presenta 
+                en la página <a target="_blank" href="https://leetcode.com/problems/two-sum/description/">LeetCode</a>
+            </p>
+
+            <pre><code class="language-java">
+            public static int[] twoSumS(int[] numbers, int target) {
+                List&lt;Integer&gt; lista = Arrays.asList(Arrays.stream(numbers).boxed().toArray(Integer[]::new));
+                int[] index = new int[2];
+
+                for (int i = 0; i &lt; numbers.length; i++) {
+                    for (int j = 0; j &lt; numbers.length; j++) {
+                        if ((i != j) && (numbers[i] + numbers[j] == target)) {
+                            index[0] = lista.indexOf(numbers[i]);
+                            index[1] = lista.indexOf(numbers[j]);
+                            break;
+                        }
+                    }
+                }
+                Arrays.sort(index);
+                return index;
+            }
+            </code></pre>
+
+            <p>Ahora deberiamos de explicar paso a paso el codigo y otras formas de hacerlo, pero no lo haremos. Este articulo
+                será una prueba para ver como de factible es la organizacion de las lecciones.
+            </p>
+            <p>Nota: Con el resaltador de código Highlight es necesario hacer scape sobre algunos carácteres</p>
+
+            <h3>Tu turno</h3>
+            <p>Es hora de practicar todo lo aprendido en esta lección. El uso de los ArrayList puede ser poderoso pero como 
+                todo hay que usarlo con precaución: Puede no ser la lista mas eficiente dependiendo de la tarea a realizar. 
+                A continuación se ofrece un ejercicio propuesto:
+
+                <ul>
+                    <li>Crea un porgrama que pida por pantalla los elementos que se van a añadir y su precio</li>
+                    <li>Deberá preguntar al usuario cada vez que termine de añadir si quiere finalizar la compra</li>
+                    <li>También le preguntará si quiere borrar algún artículo, y en caso afirmativo borrarlo</li>
+                    <li>Al final se imprimirá una lista con todos los articulos, sus precios correspondientes, el número total
+                        de articulos y precio final con su deduccion de IVA correspondiente
+                    </li><br>
+                    <li><b>Pista:</b> Prueba a crear los artículos como objetos, donde la cantidad de cada articulo y su precio
+                        unitario puedes definirlo como atributo de dicho objeto
+                    </li>
+                </ul>
+            </p>
+            <p>Es hora de trabajar, aqui tienes un recuadro parecido a un IDE. Por el momento no compila pero proximamente será
+                totalmente funcional
+            </p>
+
+            <div class="code-mirror" style="width: auto;">
+                <textarea name="codigo" id="java-editor"></textarea>
+            </div>
+
+        </div>
+
+    </main>
+
+<script src="../scripts/HeaderIteractivo.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="../scripts/CodeMirror.js"></script>
+
+</body>
+</html>

@@ -9,8 +9,7 @@
     border-radius: 7px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.25s ease-out;
-    
+    transition: all 0.25s ease-out;   
 }
 
 .button:hover {
@@ -61,6 +60,13 @@
 
 h3{
     padding-top: 5vh;
+    font-family: var(--cause-uniquifier);
+    font-weight: 700;
+}
+
+.no-decoration a{
+    text-decoration: none;
+    color: black;
 }
 
 /*Modificamos el textArea que se encargará de analizar y ejemplificar codigo como si
